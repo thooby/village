@@ -1,0 +1,39 @@
+Instance Method Summary 
+
+should_allow_mass_assignment_of(*attributes)
+should_allow_values_for(attribute, *good_values)
+should_belong_to(*associations)
+should_ensure_length_at_least(attribute, min_length, opts = {})
+should_ensure_length_in_range(attribute, range, opts = {})
+should_ensure_length_is(attribute, length, opts = {})
+should_ensure_value_in_range(attribute, range, opts = {})
+should_have_and_belong_to_many(*associations)
+should_have_class_methods(*methods)
+should_have_db_columns(*columns) (also: #should_have_db_column)
+should_have_db_indices(*columns) (also: #should_have_db_index)
+should_have_instance_methods(*methods)
+should_have_many(*associations)
+should_have_one(*associations)
+should_have_readonly_attributes(*attributes)
+should_not_allow_mass_assignment_of(*attributes)
+should_not_allow_values_for(attribute, *bad_values)
+should_validate_acceptance_of(*attributes)
+should_validate_numericality_of(*attributes)
+should_validate_presence_of(*attributes)
+should_validate_uniqueness_of(*attributes)
+
+
+
+should_assign_to(*names, &block)
+should_filter_params(*keys)
+should_not_assign_to(*names)
+should_not_set_the_flash
+should_redirect_to(description, &block)
+should_render_template(template)
+should_render_with_layout(expected_layout = 'application'))
+should_render_without_layout
+should_respond_with(response)
+should_respond_with_content_type(content_type)
+should_route(method, path, options)
+should_set_session(key, &block)
+should_set_the_flash_to(val)

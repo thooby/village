@@ -1,0 +1,27 @@
+<%= form_for  @patient, :as => :patient, :remote => true do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+      <ul>
+        <% @patient.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :commune_id %>:
+    <%= f.select :commune_id, Commune.find(:all, :order=>:name).collect{ |c| [c.name,c.id]}, :required=>true, :include_blank => true %>
+  </div>
+  <div class="field", id="addressVillages">
+    <%= render :partial => 'villages',  :locals => { :village_id => @patient.village_id }%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

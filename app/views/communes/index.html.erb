@@ -1,0 +1,23 @@
+<h1>Listing communes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @communes.each do |commune| %>
+  <tr>
+    <td><%= commune.name %></td>
+    <td><%= link_to 'Show', commune %></td>
+    <td><%= link_to 'Edit', edit_commune_path(commune) %></td>
+    <td><%= link_to 'Destroy', commune, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Commune', new_commune_path %>
