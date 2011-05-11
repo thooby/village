@@ -1,5 +1,6 @@
 class CommunesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]  
+   before_filter :authenticate_user!, :except => [:index] 
+   load_and_authorize_resource 
   # GET /communes
   # GET /communes.xml
   def index

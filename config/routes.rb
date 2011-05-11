@@ -1,13 +1,16 @@
 Villages::Application.routes.draw do
-  #get \"users\/show\"
+
+  resources :roles
+
+  devise_for :users
+  resources :users
+
+
   resources :villages
   resources :communes
   resources :patients
   match 'patients/update_village_select/:id', :controller=>'patients', :action => 'update_village_select'
-
   root :to => "home#index"
-  devise_for :users
-  resources :users, :only => :show
 
 
   # The priority is based upon order of creation:

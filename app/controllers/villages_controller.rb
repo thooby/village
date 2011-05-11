@@ -1,7 +1,8 @@
 class VillagesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:show, :index]  
   # GET /villages
   # GET /villages.xml
+  before_filter :authenticate_user!, :except => [:index] 
+  load_and_authorize_resource 
   def index
     @villages = Village.all
 

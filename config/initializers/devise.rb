@@ -54,7 +54,7 @@ Devise.setup do |config|
   config.stretches = 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "d791c4324d372766266754c74f6f2446af0bdb6f526b4b92e9c60790d4c78f4c5019402e418b6199ee341376e1409905d8ec6031133d678298989b05a92811fb"
+  # config.pepper = "4749df9ee2fabf0a1829009ba4fb541819809c1c8a75e9a8f164719f3e1b2619d6fc6ed2eede33f39a05cb5be0c3fae0596af5dd5da08b8476dbb335f4c0480a"
 
   # ==> Configuration for :confirmable
   # The time you want to give your user to confirm his account. During this time
@@ -88,7 +88,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 6..128.
-  config.password_length = 6..128
+  # config.password_length = 6..128
 
   # Regex to use to validate the email address
   # config.email_regexp = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
